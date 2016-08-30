@@ -1,4 +1,7 @@
 # -*- coding: utf-8 -*-
+
+# author:End1ng
+
 import requests
 import re
 import os,sys
