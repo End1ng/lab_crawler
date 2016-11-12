@@ -189,7 +189,12 @@ class Student(object):
             text = re.findall("<textarea.*name=\"(.*?)\".*?>([\s\S]*?)</textarea>",resget.content)
 
             if not os.path.exists(thedir) and not os.path.isfile(thedir):
-                os.makedirs(thedir)
+                try:
+                    os.makedirs(thedir)
+                except:
+                    for i in "*!@#$%^&":
+                        thedir = thedir.replace(i, " ")
+                    os.makedirs(thedir)
                 LOG.debug(u"创建文件夹: " + thedir)
 
             f = open(thedir + "/text.txt","w")
