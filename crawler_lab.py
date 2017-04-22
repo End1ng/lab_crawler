@@ -123,9 +123,9 @@ class Student(object):
         if self.getinfo():
             LOG.info(self.username + self.userid + ':' + self.password + u": 登陆成功")
             # 若登陆成功 获取完成实验列表
-            self.getfinish()
+            # self.getfinish()
 
-            self.getlab()
+            # self.getlab()
 
             # self.getunfinish()
         else:
